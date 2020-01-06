@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "AdView.h"
 @interface ViewController ()
 
 @end
@@ -16,7 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    AdView *adView = [AdView new];
+    [self.view addSubview:adView];
+
+//    [adView setFrame:CGRectMake(0, 0, 100, 100)];
     // Do any additional setup after loading the view.
+    
 }
 
 
