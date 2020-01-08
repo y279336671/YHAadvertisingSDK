@@ -31,7 +31,7 @@
 
 
 //中 上 下 左 右 左上 右上 左下 右下 左上中 右上中 左下中 右下中
-- (NSArray *)borderPointWithTargetView:(UIView *)targetView {
+- (NSMutableArray *)borderPointWithTargetView:(UIView *)targetView {
     NSMutableArray *pointsArray = [[NSMutableArray alloc] initWithCapacity:13];
     CGFloat width = CGRectGetWidth(targetView.frame);
     CGFloat height = CGRectGetHeight(targetView.frame);

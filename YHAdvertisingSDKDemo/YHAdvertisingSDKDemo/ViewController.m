@@ -7,17 +7,24 @@
 //
 
 #import "ViewController.h"
-#import "AdView.h"
-@interface ViewController ()
 
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (nonatomic, strong)UITableView *tableView;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    AdView *adView = [AdView new];
-    [self.view addSubview:adView];
+
+    [self.view addSubview:self.tableView];
+
+
+//    AdView *adView = [AdView new];
+
+
+
+//    [self.view addSubview:adView];
 
 //    [adView setFrame:CGRectMake(0, 0, 100, 100)];
     // Do any additional setup after loading the view.
@@ -25,4 +32,26 @@
 }
 
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 100;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell =  [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    if(!cell){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    }
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 50;
+}
+
+-(UITableView *)tableView{
+    if(!_tableView){
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height) style:UITableViewStylePlain];
+    }
+    return _tableView;
+}
 @end
