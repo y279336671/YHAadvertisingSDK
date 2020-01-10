@@ -77,7 +77,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        NSLog(@"-----%s", __func__);
+//        NSLog(@"-----%s", __func__);
     }
     return self;
 }
@@ -85,40 +85,40 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        NSLog(@"-----%s", __func__);
+//        NSLog(@"-----%s", __func__);
     }
     return self;
 }
 
 - (void)removeFromSuperview {
-    NSLog(@"-----%s", __func__);
+//    NSLog(@"-----%s", __func__);
 }
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
-    NSLog(@"--------%s", __func__);
+//    NSLog(@"--------%s", __func__);
 }
 
 - (void)didMoveToSuperview {
-    NSLog(@"--------%s", __func__);
+//    NSLog(@"--------%s", __func__);
 }
 
 - (void)willMoveToWindow:(UIWindow *)newWindow {
-    NSLog(@"--------%s", __func__);
+//    NSLog(@"--------%s", __func__);
 }
 
 - (void)didMoveToWindow {
-    NSLog(@"--------%s", __func__);
+//    NSLog(@"--------%s", __func__);
 }
 
 - (void)willRemoveSubview:(UIView *)subview {
-    NSLog(@"--------%s", __func__);
+//    NSLog(@"--------%s", __func__);
 }
 
 - (void)didAddSubview:(UIView *)subview {
-    NSLog(@"--------%s", __func__);
+//    NSLog(@"--------%s", __func__);
 }
 
 - (void)layoutSubviews {
-    NSLog(@"--------%s", __func__);
+//    NSLog(@"--------%s", __func__);
 }
 @end

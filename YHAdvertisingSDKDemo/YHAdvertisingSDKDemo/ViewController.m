@@ -20,6 +20,11 @@
     [self.view addSubview:self.tableView];
 
 
+    NSArray *array = @[@59,@4,@235,@39,@1123];
+    for (int i = 0; i < array.count; ++i) {
+        
+    }
+    
 //    AdView *adView = [AdView new];
 
 
@@ -41,13 +46,23 @@
     if(!cell){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
+
     AdView *adView = [AdView new];
+    adView.tag = 1;
     [cell addSubview:adView];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 50;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    UIView *view =  [cell viewWithTag:1];
+    NSLog(@"%@",view);
+//    CGPoint tempPoint = [view convertPoint:CGPointMake(0, 0) toView:[UIApplication sharedApplication].keyWindow];
+////    NSLog(@"%@",tempPoint);
 }
 
 -(UITableView *)tableView{
